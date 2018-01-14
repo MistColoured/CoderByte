@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Drum Kit</title>
+    <!--<link rel="stylesheet" href="style.css">-->
+</head>
+<body>
+
+<p id="app">Insert here</p>
+
+<script>
+longestWord = (sen) => {
+  const words = sen.match(/[a-z0-9]+/gi)
+  const ordered = words.sort((a,b) => a.length - b.length)
+  console.log(ordered);
+  return ordered[words.length - 1]
+}
+
+const challenge = longestWord('My namessdfsdfdfs is Mic fdsjfsdfsdfsdfkfh  asfhs  sdfs fhael')
+ document.getElementById('app').innerText=challenge
+
+</script>
+</body>
+</html>
