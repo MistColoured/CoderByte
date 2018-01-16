@@ -10,14 +10,13 @@
 <p id="app">Insert here</p>
 
 <script>
-longestWord = (sen) => {
-  const words = sen.match(/[a-z0-9]+/gi)
-  const ordered = words.sort((a,b) => a.length - b.length)
-  console.log(ordered);
-  return ordered[words.length - 1]
-}
+ const longestWord = (sen) => {
+   const words = sen.match(/[a-z0-9]+/gi);
+   const ordered = words.sort((a,b) => a.length > b.length ? 1 : -1).reverse();
+   return ordered[0];
+ }
 
-const challenge = longestWord('My namessdfsdfdfs is Mic fdsjfsdfsdfsdfkfh  asfhs  sdfs fhael')
+const challenge = longestWord('333 1 4444 88888888 asdsadsadasdasd');
  document.getElementById('app').innerText=challenge
 
 </script>

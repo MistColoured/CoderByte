@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Drum Kit</title>
+    <!--<link rel="stylesheet" href="style.css">-->
+</head>
+<body>
+
+<p id="app">Insert here</p>
+
+<script>
+const changeChar = (char) => {
+  if (char === 'z') {
+    return 'a';
+  } else if (char === 'Z') {
+    return 'A';
+  } else return String.fromCharCode(char.charCodeAt(0) + 1)
+}
+
+  const LetterChange = (str) => str.replace(/[a-zA-Z]/g, changeChar)
+
+  const challenge = LetterChange('My name is Mike and I am tall and happy')
+  document.getElementById('app').innerText=challenge
+
+</script>
+</body>
+</html>
