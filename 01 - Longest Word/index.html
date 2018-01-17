@@ -3,20 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>JS Drum Kit</title>
-    <!--<link rel="stylesheet" href="style.css">-->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <p id="app">Insert here</p>
 
 <script>
- const longestWord = (sen) => {
-   const words = sen.match(/[a-z0-9]+/gi);
-   const ordered = words.sort((a,b) => a.length > b.length ? 1 : -1).reverse();
-   return ordered[0];
- }
+const longestWord = str => str.match(/[a-z0-9]+/gi).sort((a, b) => a.length > b.length ? 1 : -1).reverse()[0];
 
-const challenge = longestWord('333 1 4444 88888888 asdsadsadasdasd');
+
+const challenge = longestWord('333 1 4444 88888888 asddasd');
  document.getElementById('app').innerText=challenge
 
 </script>

@@ -3,23 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>JS Drum Kit</title>
-    <!--<link rel="stylesheet" href="style.css">-->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <p id="app">Insert here</p>
 
 <script>
-function factoral (num) {
-  var total = 1;
-  for (i = 1; i <=num; i++) {
-    total *= i;
-  console.log(total);}
-    return total;
- }
 
-const challenge = factoral(10);
- document.getElementById('app').innerText=challenge
+  function factorial (num) {
+    return num === 1 ? 1 : factorial(num - 1) * num;
+  }
+
+  function factoralLoop (num) {
+    var total = 1;
+    for (i = 1; i <=num; i++) {
+      total *= i;
+    }
+    return total;
+  }
+
+  const challenge = factorial(5);
+  const challenge2 = factoralLoop(5)
+  document.getElementById('app').innerText=challenge + ', ' + challenge2;
 
 </script>
 </body>

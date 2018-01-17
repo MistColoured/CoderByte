@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>JS Drum Kit</title>
-    <!--<link rel="stylesheet" href="style.css">-->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <p id="app">Insert here</p>
 
 <script>
-const capitalize = str => str.replace(/\b[a-z]/gi, char => char.toUpperCase())
+function capitalize (str) {
+  return str.replace(/\b[a-z]/gi, char => char.toUpperCase());
+}
 const challenge = capitalize('my name is mike and i rock');
  document.getElementById('app').innerText=challenge
 
