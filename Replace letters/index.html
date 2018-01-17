@@ -10,14 +10,21 @@
 <p id="app">Insert here</p>
 
 <script>
- const longestWord = (sen) => {
-   const words = sen.match(/[a-z0-9]+/gi);
-   const ordered = words.sort((a,b) => a.length > b.length ? 1 : -1).reverse();
-   return ordered[0];
- }
+function changeChar (char) {
+  if (char === 'z') {
+    return 'a';
+  } else if (char === 'Z') {
+    return 'A';
+  } else return String.fromCharCode(char.charCodeAt(0) + 1)
+}
 
-const challenge = longestWord('333 1 4444 88888888 asdsadsadasdasd');
- document.getElementById('app').innerText=challenge
+function changeAll (str) {
+  const words = str.replace(/[a-zA-Z]/g, changeChar)
+  return words.replace(/[aeiou]/g, char => char.toUpperCase());
+}
+
+const challenge = changeAll('Hello, my name is Mike abcdefghijklmnopqrstuvwxyz');
+ document.getElementById('app').innerText=challenge;
 
 </script>
 </body>
